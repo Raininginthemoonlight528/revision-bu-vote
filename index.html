@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>revision BU</title>
+    <meta name="description" content="Vote pour choisir entre BU Saint Charles et BU Luminy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sparkles sparkles-1"></div>
+    <div class="sparkles sparkles-2"></div>
+
+    <main class="container">
+      <section class="card">
+        <p class="eyebrow">🥰 vote final</p>
+        <h1>revision BU</h1>
+
+        <div class="info-box">
+          <span class="mini-label">Sondage</span>
+          <p>Choisis entre les 2 campus préférés</p>
+        </div>
+
+        <div class="vote-counter">
+          <span id="voteCount">0 / 9</span>
+          <span id="voteStatus">votes enregistrés</span>
+        </div>
+
+        <div class="vote-grid" id="voteGrid">
+          <button class="vote-button button-saint" data-choice="saint">
+            <span class="emoji">🌸</span>
+            <span>BU saint charles</span>
+          </button>
+
+          <button class="vote-button button-luminy" data-choice="luminy">
+            <span class="emoji">💖</span>
+            <span>BU luminy</span>
+          </button>
+        </div>
+
+        <div class="result-box hidden" id="resultBox">
+          <h2>Résultat final ✨</h2>
+          <div class="result-summary" id="resultSummary">Le gagnant apparaît ici</div>
+
+          <div class="bars">
+            <div class="bar-row">
+              <div class="bar-labels">
+                <span>BU saint charles</span>
+                <span id="saintPercent">0%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill saint-fill" id="saintBar"></div>
+              </div>
+            </div>
+
+            <div class="bar-row">
+              <div class="bar-labels">
+                <span>BU luminy</span>
+                <span id="luminyPercent">0%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill luminy-fill" id="luminyBar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-actions">
+          <button id="resetButton" class="reset-button">Réinitialiser</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
